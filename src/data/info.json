@@ -1,0 +1,214 @@
+{
+  "name": "Pedro Iago de Almeida Bernardes",
+  "birthdate": "08/12/1991",
+  "birthplace": "São Paulo",
+  "residence": {
+    "city": "Belo Horizonte",
+    "state": "Minas Gerais",
+    "address": "Av 28 de setembro, 1259, casa 6, Belo Horizonte, Minas Gerais 30280050"
+  },
+  "marital_status": "Casado",
+  "spouse": {
+    "name": "Hellen",
+    "profession": "Médica obstetra",
+    "workplace": "Hospital Sofia Feldman",
+    "story": "Conheci minha esposa em um campeonato de Kung Fu na cidade natal dela, Cuiabá. Namoramos à distância por 5 anos, depois nos casamos e mudamos juntos para BH. Amo minha esposa e ela é o amor da minha vida. Sou casado há 5 anos.",
+    "image": "/assets/hellen.jpg"
+  },
+  "years_in_bh": 5,
+  "reason_for_moving": "Residência de Hellen no hospital Sofia Feldman",
+  "previous_residences": [
+    {
+      "city": "Campo Grande",
+      "state": "Mato Grosso do Sul",
+      "years": 9,
+      "reason": "Formação em Educação Física"
+    }
+  ],
+  "pets": [
+    {
+      "name": "Dark",
+      "type": "Gato",
+      "origin": "Cuiaba",
+      "story": "O nome do Dark é inspirado no filme The Ghost and the Darkness (A sombra e a Escuridão). Ele tinha um irmão chamado Ghost, mas o mesmo fugiu.",
+      "image": "/assets/dark.jpg"
+    },
+    {
+      "name": "Safira",
+      "type": "Cachorro",
+      "origin": "Adotada em feira de adoção",
+      "description": "Caramelo",
+      "story": "A Safira tem heterocromia, e um de seus olhos é azul, por isso seu nome.",
+      "image": "/assets/safira.jpg"
+    },
+    {
+      "name": "Mufasa",
+      "type": "Cachorro",
+      "origin": "Resgatado da rua",
+      "description": "Caramelo",
+      "image": "/assets/mufasa.jpg"
+    }
+  ],
+  "hobbies": [
+    {
+      "name": "Assistir filmes e séries",
+      "image": "/assets/movies.jpg"
+    },
+    {
+      "name": "Jogar boardgames",
+      "image": "/assets/boardgame.jpg"
+    },
+    {
+      "name": "Jogar Magic",
+      "image": "/assets/magic.jpg"
+    },
+    {
+      "name": "Sair para comer",
+      "image": "/assets/dining.jpg"
+    },
+    {
+      "name": "Dançar forró",
+      "image": "/assets/forro.jpg"
+    },
+    {
+      "name": "Fazer pixel arte",
+      "image": "/assets/pixelart.jpg"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Ir a shows",
+      "image": "/assets/concert.jpg"
+    },
+    {
+      "name": "Ler livros",
+      "current_reading": "Atualmente estou lendo o terceiro livro de Duna.",
+      "image": "/assets/dune.jpg"
+    },
+    {
+      "name": "Escrever artigos sobre animes",
+      "image": "/assets/anime.jpg"
+    },
+    {
+      "name": "Participar de podcasts",
+      "details": "Escrevo artigos sobre animes e também participo de um podcast da Cúpula do Trovão, no qual tenho quase 100 artigos publicados e 30 participações em podcast.",
+      "podcast_link": "https://cupulatrovao.com.br/",
+      "image": "/assets/podcast.jpg"
+    }
+  ],
+  "diet": "Sou vegano e consigo adaptar qualquer prato para uma versão vegana.",
+  "family": {
+    "siblings": {
+      "total": 5,
+      "details": "Sou o irmão mais velho de 5 irmãos. Os mais novos são gêmeos e têm 21 anos de diferença de idade.",
+      "image": "/assets/family.jpg"
+    }
+  },
+  "contact": {
+    "phone": "31 99162-0813",
+    "email": "pedroiago.bernardes@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/pedro-bernardes-a3500a183/",
+    "github": "https://github.com/arc4dex",
+    "portfolio": "https://portfolio-pedrobernardes.vercel.app/",
+    "image": "/assets/pedro.jpg"
+  },
+  "education": [
+    {
+      "degree": "AI 4 Tech: Estudo da aplicação de IAs generativas na automação de empresas",
+      "institution": "IFTL",
+      "location": "São Paulo, SP",
+      "status": "Cursando",
+      "start_date": "05/2024",
+      "end_date": "08/2024"
+    },
+    {
+      "degree": "Desenvolvimento Full Stack",
+      "institution": "Kenzie Academy Brasil",
+      "location": "Brasil",
+      "status": "Concluído",
+      "start_date": "02/2022",
+      "end_date": "02/2023"
+    },
+    {
+      "degree": "MBA em Gestão de Saúde Pública",
+      "institution": "Unigran Capital",
+      "location": "Campo Grande, MS",
+      "status": "Concluído",
+      "start_date": "01/2018",
+      "end_date": "01/2019"
+    },
+    {
+      "degree": "Educação Física",
+      "institution": "Universidade Católica Dom Bosco",
+      "location": "Campo Grande, MS",
+      "status": "Concluído",
+      "start_date": "02/2013",
+      "end_date": "12/2018"
+    },
+    {
+      "degree": "Mecânica e Manutenção Aeronáutica",
+      "institution": "Escola de Aviação Civil Fly Company",
+      "location": "Campo Grande, MS",
+      "status": "Concluído",
+      "start_date": "02/2009",
+      "end_date": "12/2012"
+    }
+  ],
+  "professional_experience": [
+    {
+      "role": "Programador Front-end",
+      "company": "JobConvo",
+      "location": "Belo Horizonte, MG",
+      "start_date": "10/2022",
+      "end_date": "06/2023",
+      "responsibilities": [
+        "Atualizações e upgrades no sistema de RH",
+        "Modernização de dashboards",
+        "Melhoria na navegabilidade e design da plataforma"
+      ]
+    },
+    {
+      "role": "Professor de Educação Física",
+      "company": "Academia Olimphia",
+      "location": "Campo Grande, MS",
+      "start_date": "01/2019",
+      "end_date": "01/2021",
+      "responsibilities": [
+        "Atendimento a novos alunos",
+        "Montagem de treinos personalizados",
+        "Orientação e prescrição de exercícios"
+      ]
+    },
+    {
+      "role": "Gerente de compras",
+      "company": "Coxinha Express",
+      "location": "Campo Grande, MS",
+      "start_date": "01/2013",
+      "end_date": "01/2015",
+      "responsibilities": [
+        "Gerenciamento de operações de compras e controle de estoque",
+        "Fechamento de ponto, pagamento de salários e manutenção do fluxo de caixa",
+        "Implementação de estratégia de revisão de gastos"
+      ]
+    }
+  ],
+  "skills": [
+    "Desenvolvimento Front-end: JavaScript, TypeScript, React, Redux, CSS, HTML",
+    "Back-end e Bancos de Dados: Python, SQL, PostgreSQL",
+    "Ferramentas e Métodos Ágeis: Docker, Scrum, Kanban",
+    "Liderança e Gestão: experiência em liderar equipes e gerenciar cronogramas de projeto",
+    "Comunicação: habilidade comprovada em comunicar conceitos técnicos para não técnicos"
+  ],
+  "objective": "Estou em busca de uma posição onde possa não apenas aplicar minha paixão por tecnologia e inovação, mas também continuar crescendo e evoluindo como desenvolvedor front-end. Almejo contribuir com uma empresa que preze pela criatividade e inovação, onde minhas habilidades técnicas possam impulsionar o sucesso do negócio e ao mesmo tempo me proporcionar desafios que afiem ainda mais minhas competências.",
+  "images": {
+    "pedro": "/assets/pedro.jpg",
+    "hellen": "/assets/hellen.jpg",
+    "dark": "/assets/dark.jpg",
+    "safira": "/assets/safira.jpg",
+    "mufasa": "/assets/mufasa.jpg",
+    "family": "/assets/family.jpg",
+    "dune": "/assets/dune.jpg",
+    "boardgame": "/assets/boardgame.jpg",
+    "wedding": "/assets/wedding.jpg"
+  }
+}
