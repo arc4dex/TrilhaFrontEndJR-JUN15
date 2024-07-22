@@ -201,14 +201,14 @@
   ],
   "objective": "Estou em busca de uma posição onde possa não apenas aplicar minha paixão por tecnologia e inovação, mas também continuar crescendo e evoluindo como desenvolvedor front-end. Almejo contribuir com uma empresa que preze pela criatividade e inovação, onde minhas habilidades técnicas possam impulsionar o sucesso do negócio e ao mesmo tempo me proporcionar desafios que afiem ainda mais minhas competências.",
   "images": {
-    "pedro": "/assets/pedro.jpg",
-    "hellen": "/assets/hellen.jpg",
-    "dark": "/assets/dark.jpg",
-    "safira": "/assets/safira.jpg",
-    "mufasa": "/assets/mufasa.jpg",
-    "family": "/assets/family.jpg",
-    "dune": "/assets/dune.jpg",
-    "boardgame": "/assets/boardgame.jpg",
-    "wedding": "/assets/wedding.jpg"
+    "pedro": "/assets/img/pedro.jpg",
+    "hellen": "/assets/img/hellen.jpg",
+    "dark": "/assets/img/dark.jpg",
+    "safira": "/assets/img/safira.jpg",
+    "mufasa": "/assets/img/mufasa.jpg",
+    "family": "/assets/img/family.jpg",
+    "dune": "/assets/img/dune.jpg",
+    "boardgame": "/assets/img/boardgame.jpg",
+    "wedding": "/assets/img/wedding.jpg"
   }
 }

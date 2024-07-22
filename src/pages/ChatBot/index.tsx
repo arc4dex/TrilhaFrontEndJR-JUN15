@@ -8,15 +8,15 @@ import { getFormattedInfo } from "../../hook/loadInfo";
 
 const data = {
   images: {
-    pedro: "/assets/pedro.jpg",
-    hellen: "/assets/hellen.jpg",
-    dark: "/assets/dark.jpg",
-    safira: "/assets/safira.jpg",
-    mufasa: "/assets/mufasa.jpg",
-    family: "/assets/family.jpg",
-    dune: "/assets/dune.jpg",
-    boardgame: "/assets/boardgame.jpg",
-    wedding: "/assets/wedding.jpg",
+    pedro: "/assets/img/pedro.jpg",
+    hellen: "/assets/img/hellen.jpg",
+    dark: "/assets/img/dark.jpg",
+    safira: "/assets/img/safira.jpg",
+    mufasa: "/assets/img/mufasa.jpg",
+    family: "/assets/img/family.jpg",
+    dune: "/assets/img/dune.jpg",
+    boardgame: "/assets/img/boardgame.jpg",
+    wedding: "/assets/img/wedding.jpg",
   },
 };
 
@@ -109,5 +109,3 @@ export const ChatBot: React.FC = () => {
     </div>
   );
 };
-
-

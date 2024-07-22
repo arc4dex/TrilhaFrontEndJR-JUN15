@@ -1,13 +1,14 @@
 // src/App.tsx
 import React from "react";
 import AppRoutes from "./routes/AppRoutes";
+import GlobalStyle from "./styles/globalStyles";
 
 const App: React.FC = () => {
   return (
-    <div>
-      <h1>Assistente Virtual</h1>
+    <>
+      <GlobalStyle />
       <AppRoutes />
-    </div>
+    </>
   );
 };
 
