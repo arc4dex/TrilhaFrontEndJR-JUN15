@@ -1,80 +1,46 @@
-![Código Certo Coders](https://utfs.io/f/3b2340e8-5523-4aca-a549-0688fd07450e-j4edu.jfif)
+# Getting Started with Create React App
 
-# 📚 Trilha Inicial Front-End Jr
-Este projeto tem como objetivo criar uma página web onde os candidatos podem se apresentar, compartilhar seus gostos pessoais e explicar por que desejam fazer parte da comunidade **Codigo Certo Coders** e participar de projetos voluntários.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Estrutura da Página
-- **Foto:** Incluir uma foto pessoal.
-- **Informações Pessoais:** Nome completo e idade.
-- **Sobre:** Descrição pessoal, incluindo objetivos de carreira, áreas de interesse na programação, entre outros.
-- **Gostos Pessoais:** Liste ou descreva seus gostos pessoais de uma maneira que mostre sua criatividade e paixões.
-- **Motivações:** Explique sua motivação em querer participar da comunidade **Codigo Certo Coders**
+## Available Scripts
 
-**Como você pode contar sua história de maneira visual e envolvente?**
-(Transmita a resposta dessas perguntas de alguma forma na sua página)
+In the project directory, you can run:
 
-### Requisitos de Design e Funcionalidade 
-- **Design Moderno e Responsivo:** Garantir que a página seja visualmente atraente e funcional em diferentes dispositivos.
-- **Uso de Imagens:** Incluir pelo menos uma imagem (foto pessoal).
+### `yarn start`
 
-Primordial: Utilizar as cores da paleta da **Codigo Certo Coders:**
-![Codigo Certo Coders Cores](https://github.com/codigocerto/TrilhaFrontEndJR-JUN15/assets/170693068/5ced1a97-b2c6-4f54-836c-7b3e115f879f)
-- **#000000** (preto)
-- **#e53939** (vermelho)
-- **#ffffff** (branco)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Detalhes Técnicos: 🔧
-- **Boas Práticas:** Utilizar boas práticas de código limpo, legível e bem documentado.
-- **Git:** Utilizar Git para controle de versão e submeter o projeto através de um repositório público no GitHub.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-### Apreciações: 🎉
-- **Feedbacks visuais para o usuário.**
-- **Permitir edição dos conteúdos.**
-- **Utilização máxima possível de HTML semântico.**
-- **CSS bem estruturado.**
-- **Código limpo e bem organizado.**
+### `yarn test`
 
-### Dicas para Abordar o Projeto 🌟
-- **Crie um Fork desse Repositório.**
-- **Criar do Zero:** É fundamental que o projeto seja desenvolvido completamente do zero, demonstrando suas habilidades e criatividade desde o início.
-- **Atenção aos Detalhes Visuais:** Utilize a paleta de cores e elementos visuais de forma coesa para uma experiência impactante.
-- **Versionamento com Git:** Faça uso eficiente do Git para controlar suas alterações e manter um histórico claro do desenvolvimento.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Critérios de Avaliação: 📝
-- **Funcionalidade:** A aplicação deve atender à estrutura da página e aos requisitos definidos.
-- **Qualidade do Código:** O código deve ser limpo, bem estruturado e adequadamente documentado.
-- **UI/UX:** A interface do usuário deve ser intuitiva e visualmente atraente.
-- **Uso do Git:** Utilização eficaz do controle de versão com mensagens de commit significativas.
+### `yarn build`
 
-### Não Queremos 🚫
-- Descobrir que o candidato não foi quem realizou o teste.
-- Ver commits grandes sem muita explicação nas mensagens no repositório.
-- Entregas padrão ou cópias de outros projetos. Buscamos originalidade e autenticidade em cada contribuição.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Prazo ⏳
-A data máxima para entrega das trilhas foi removida, permitindo que as pessoas entreguem conforme sua disponibilidade. No entanto, ainda é necessário concluir a trilha com sucesso para ser inserido em uma equipe.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Instruções de Entrega: 📬
-Após finalizar o projeto, publique-o em uma URL pública (por exemplo, Vercel, Netlify, GitHub Pages, etc.) e preencha o [Formulário](https://forms.gle/gZViPMTSDV5nidSu6):  
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
----
+### `yarn eject`
 
-### Desafio da Inovação 🚀
-Achou esse projeto inicial simples? Eleve ainda mais! Estamos em busca de mentes inovadoras que não apenas criem, mas que também desafiem os padrões. Como você pode transformar essa estrutura inicial em algo verdadeiramente extraordinário? Demonstre o poder da sua criatividade e o impacto das suas ideias inovadoras!
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
----
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-🔗 **Mantenha-se Conectado:**
-- [Discord](https://discord.gg/wzA9FGZHNv)
-- [Website](http://www.codigocertocoders.com.br/)
-- [LinkedIn](https://www.linkedin.com/company/codigocerto/)
-  
-🌐 **Contato:**
-- Email: codigocertocoders@gmail.com
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
----
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-### Precisa de Ajuda?
-Está com alguma dificuldade, encontrou algum problema no desafio ou tem alguma sugestão pra gente? Crie uma issue e descreva o que achar necessário.
+## Learn More
 
-**Construindo o amanhã, hoje.**
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
