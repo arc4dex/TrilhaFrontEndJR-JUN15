@@ -1,4 +1,3 @@
-// src/styles/GlobalStyle.ts
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -6,6 +5,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  html, body, #root {
+    height: 100%;
+    width: 100%;
   }
 
   body {
@@ -17,13 +21,12 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
     font-size: 1.25rem;
-    overflow: hidden; /* Remove scrollbars */
+    overflow: auto; /* Permitir rolagem */
   }
 
   h1, p {
-    animation: none; /* Disable animation for global styles */
+    animation: none; 
   }
 
   button {

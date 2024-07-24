@@ -1,12 +1,15 @@
-// src/components/TypingText/index.tsx
 import React, { useEffect, useState } from "react";
 import { TypingText as StyledTypingText } from "./styles";
 
 interface TypingTextProps {
   text: string;
+  onTypingEnd: () => void;
 }
 
-export const TypingText: React.FC<TypingTextProps> = ({ text }) => {
+export const TypingText: React.FC<TypingTextProps> = ({
+  text,
+  onTypingEnd,
+}) => {
   const [currentText, setCurrentText] = useState("");
   const [index, setIndex] = useState(0);
 
@@ -17,8 +20,10 @@ export const TypingText: React.FC<TypingTextProps> = ({ text }) => {
         setIndex((prev) => prev + 1);
       }, 50);
       return () => clearTimeout(timeoutId);
+    } else {
+      onTypingEnd();
     }
-  }, [index, text]);
+  }, [index, text, onTypingEnd]);
 
   return (
     <StyledTypingText hideCaret={index >= text.length}>

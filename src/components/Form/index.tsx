@@ -1,4 +1,5 @@
 import React, { ChangeEvent, FormEvent } from "react";
+import { FormContainer } from "./styles";
 
 interface FormProps {
   query: string;
@@ -16,7 +17,7 @@ export const Form: React.FC<FormProps> = ({
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <FormContainer onSubmit={handleSubmit}>
       <input
         type="text"
         value={query}
@@ -24,6 +25,6 @@ export const Form: React.FC<FormProps> = ({
         placeholder="Digite sua pergunta"
       />
       <button type="submit">Enviar</button>
-    </form>
+    </FormContainer>
   );
 };

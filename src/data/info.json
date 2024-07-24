@@ -12,8 +12,10 @@
     "name": "Hellen",
     "profession": "Médica obstetra",
     "workplace": "Hospital Sofia Feldman",
-    "story": "Conheci minha esposa em um campeonato de Kung Fu na cidade natal dela, Cuiabá. Namoramos à distância por 5 anos, depois nos casamos e mudamos juntos para BH. Amo minha esposa e ela é o amor da minha vida. Sou casado há 5 anos.",
-    "image": "/assets/hellen.jpg"
+    "story": "Conheci minha esposa em um campeonato de Kung Fu na cidade natal dela, Cuiabá. Namoramos à distância por 5 anos, depois nos casamos e mudamos juntos para Belo Horizonte. Amo minha esposa e ela é o amor da minha vida. Sou casado há 5 anos.",
+    "image": "/assets/img/hellen.jpg",
+    "function": "A mulher que tem a coragem de aturar o Pedro",
+    "type": "Humana (Esposa Extraordinária)"
   },
   "years_in_bh": 5,
   "reason_for_moving": "Residência de Hellen no hospital Sofia Feldman",
@@ -29,24 +31,30 @@
     {
       "name": "Dark",
       "type": "Gato",
-      "origin": "Cuiaba",
+      "origin": "Cuiabá",
       "story": "O nome do Dark é inspirado no filme The Ghost and the Darkness (A sombra e a Escuridão). Ele tinha um irmão chamado Ghost, mas o mesmo fugiu.",
-      "image": "/assets/dark.jpg"
+      "image": "/assets/img/dark.jpg",
+      "function": "Incomodar seus humanos",
+      "atribuit": "Bebê da mamãe"
     },
     {
       "name": "Safira",
-      "type": "Cachorro",
       "origin": "Adotada em feira de adoção",
+      "type": "Cachorro",
       "description": "Caramelo",
-      "story": "A Safira tem heterocromia, e um de seus olhos é azul, por isso seu nome.",
-      "image": "/assets/safira.jpg"
+      "story": "A Safira tem heterocromia, e um de seus olhos é azul, por isso seu nome. Carinhosa e amorosa, gosta de comer o dia todo e ama mais o seu puff do que sua familia.",
+      "image": "/assets/img/safira.jpg",
+      "function": "Dormir e comer",
+      "atribuit": "Caramelo Raiz"
     },
     {
       "name": "Mufasa",
       "type": "Cachorro",
-      "origin": "Resgatado da rua",
+      "origin": "Resgatado da rua, gosta de carinho e abraços quentinhos o dia todo. Genioso, quando fica bravo com algo não quer conversa com ninguém",
       "description": "Caramelo",
-      "image": "/assets/mufasa.jpg"
+      "image": "/assets/img/mufasa.jpg",
+      "function": "Arranhar todo mundo e pedir carinho o dia inteiro",
+      "atribuit": "Caramelo Raiz"
     }
   ],
   "hobbies": [
@@ -110,7 +118,9 @@
     "linkedin": "https://www.linkedin.com/in/pedro-bernardes-a3500a183/",
     "github": "https://github.com/arc4dex",
     "portfolio": "https://portfolio-pedrobernardes.vercel.app/",
-    "image": "/assets/pedro.jpg"
+    "image": "/assets/img/pedro.jpg",
+    "function": "Mestre de Skynet 2.0",
+    "type": "Humano (Desenvolvedor Extraordinário)"
   },
   "education": [
     {

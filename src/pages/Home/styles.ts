@@ -1,4 +1,3 @@
-// src/pages/styles.ts
 import styled, { keyframes } from 'styled-components';
 
 const typing = keyframes`
@@ -30,7 +29,7 @@ export const HomeContainer = styled.div`
   height: 100vh;
   padding: 0 20px;
   background-color: black;
-  color: green;
+  color: #00ff00;
   font-family: 'Courier New', Courier, monospace;
   position: relative;
 
@@ -42,12 +41,15 @@ export const HomeContainer = styled.div`
   h1 {
     white-space: nowrap;
     overflow: hidden;
-    border-right: 0.15em solid green;
+    border-right: 0.15em solid #00ff00;
     font-size: 2rem;
     animation: ${typing} 4s steps(40, end), ${blinkCaret} 0.75s step-end infinite;
 
     @media (max-width: 768px) {
       font-size: 1.5rem;
+      white-space: normal; /* Allow text to wrap */
+      overflow: visible; /* Allow text to wrap */
+      animation: none; /* Disable animation on mobile */
     }
 
     @media (max-width: 480px) {
@@ -96,7 +98,7 @@ export const HomeContainer = styled.div`
     }
 
     &.start {
-      background-color: green;
+      background-color: #00ff00;
 
       &:hover {
         background-color: darkgreen;
@@ -105,7 +107,7 @@ export const HomeContainer = styled.div`
   }
 
   .matrix-animation {
-    position: fixed; /* Changed to fixed */
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
@@ -120,7 +122,7 @@ export const HomeContainer = styled.div`
     flex: 1 1 2%;
     overflow: hidden;
     color: limegreen;
-    font-size: 24px; /* Adjust font size for better visibility */
+    font-size: 24px;
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     flex-direction: column;
@@ -138,10 +140,17 @@ export const HomeContainer = styled.div`
   }
 `;
 
+export const ContainerIniciar = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
 export const TypingText = styled.p<{ hideCaret?: boolean }>`
   display: inline-block;
   position: relative;
-  color: green;
+  color: #00ff00;
 
   .caret {
     border-right: 0.1em solid green;
