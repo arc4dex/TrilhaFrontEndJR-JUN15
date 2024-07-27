@@ -1,3 +1,4 @@
+/* src/pages/Home/styles.ts */
 import styled, { keyframes } from 'styled-components';
 
 const typing = keyframes`
@@ -98,10 +99,10 @@ export const HomeContainer = styled.div`
     }
 
     &.start {
-      background-color: #00ff00;
+      background-color: darkgreen;
 
       &:hover {
-        background-color: darkgreen;
+        background-color: #00ff00;
       }
     }
   }
@@ -131,16 +132,23 @@ export const HomeContainer = styled.div`
 
   .matrix-text-up {
     display: block;
-    animation: ${matrixAnimationUp} 5s linear infinite;
+    animation: ${matrixAnimationUp} 6s linear infinite;
   }
 
   .matrix-text-down {
     display: block;
-    animation: ${matrixAnimationDown} 5s linear infinite;
+    animation: ${matrixAnimationDown} 6s linear infinite;
   }
 `;
 
 export const ContainerIniciar = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
+export const ContainerBasic = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -153,7 +161,7 @@ export const TypingText = styled.p<{ hideCaret?: boolean }>`
   color: #00ff00;
 
   .caret {
-    border-right: 0.1em solid green;
+    border-right: 0.1em solid #00ff00;
     animation: ${blinkCaret} 0.75s step-end infinite;
     visibility: ${({ hideCaret }) => (hideCaret ? 'hidden' : 'visible')};
   }
@@ -164,4 +172,20 @@ export const ButtonsContainer = styled.div`
   display: flex;
   justify-content: center;
   gap: 20px;
+`;
+
+export const ResponseContainer = styled.div`
+  max-height: 70vh; 
+  overflow-y: auto;
+`;
+
+export const InfoHeader = styled.h2`
+  color: #00ff00;
+`;
+
+export const FormContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 `;

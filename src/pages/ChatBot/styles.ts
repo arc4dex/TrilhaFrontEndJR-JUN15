@@ -8,6 +8,14 @@ export const ContainerMain = styled.main`
   }
 `
 
+export const ContainerBasic = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
 export const ContainerCard = styled.div`
   display: flex;
   flex-direction: column;

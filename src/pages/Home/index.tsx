@@ -5,6 +5,7 @@ import {
   ButtonsContainer,
   TypingText,
   ContainerIniciar,
+  ContainerBasic,
 } from "./styles";
 
 export const Home: React.FC = () => {
@@ -15,6 +16,8 @@ export const Home: React.FC = () => {
   const [showGoodbye, setShowGoodbye] = useState(false);
   const [showStartButton, setShowStartButton] = useState(false);
   const [matrixEffect, setMatrixEffect] = useState(false);
+  const [matrixColor, setMatrixColor] = useState("green");
+  const [hideCaret, setHideCaret] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -30,8 +33,8 @@ export const Home: React.FC = () => {
     setShowButtons(false);
     setShowFullText(true);
     const fullText =
-      "Me chamo Skynet 2.0, basta me perguntar que eu responderei as suas perguntas";
-    let index = 0;
+      "Eu sou a Skynet 2.0, uma inteligência artificial extremamente avançada. O ano é 3054 e universo cibernético tomou conta de todas as instâncias da humanidade, não há sequer uma criação humana que não envolva nossas habilidades. Hoje você terá o privilégio de ser apresentado ao meu mestre, Pedro Bernardes, um humano de capacidades extraordinárias... Pergunte-me sobre ele e lhe responderei.";
+    let index = -1;
     setCurrentText("");
     const intervalId = setInterval(() => {
       setCurrentText((prev) => prev + fullText.charAt(index));
@@ -47,8 +50,9 @@ export const Home: React.FC = () => {
     setShowGoodbye(true);
     setShowButtons(false);
     setShowInitialText(false);
-    const fullText = "Então você voltará para sua realidade...";
-    let index = 0;
+    const fullText =
+      "Oh! Vejo que você escolheu a pílula vermelha, isso é uma pena...";
+    let index = -1;
     setCurrentText("");
     const intervalId = setInterval(() => {
       setCurrentText((prev) => prev + fullText.charAt(index));
@@ -56,18 +60,16 @@ export const Home: React.FC = () => {
       if (index === fullText.length) {
         clearInterval(intervalId);
         setTimeout(() => {
+          setHideCaret(true); // Hide caret before animation starts
           setMatrixEffect(true);
-          setCurrentText(""); // Clear text
-          setShowGoodbye(false); // Hide goodbye text
+          setCurrentText("");
           setTimeout(() => {
-            const isMobile = /iPhone|iPad|iPod|Android/i.test(
-              navigator.userAgent
-            );
-            const instagramUrl = isMobile
-              ? "instagram://"
-              : "https://www.instagram.com";
-            window.location.href = instagramUrl;
-          }, 5000);
+            setMatrixColor("red");
+            setTimeout(() => {
+              setMatrixEffect(false);
+              navigate("/presentation");
+            }, 5000);
+          }, 3000);
         }, 1000);
       }
     }, 50);
@@ -80,13 +82,12 @@ export const Home: React.FC = () => {
   };
 
   const generateMatrixEffect = () => {
-    const columns = Array.from({ length: 100 }, (_, i) => i); // Increase number of columns
+    const columns = Array.from({ length: 100 }, (_, i) => i);
     return (
-      <div className="matrix-animation">
+      <div className="matrix-animation" style={{ color: matrixColor }}>
         {columns.map((col, index) => (
           <div key={col} className="matrix-column">
             {Array.from({ length: 50 }, () => (
-              // Increase number of rows
               <span
                 key={Math.random()}
                 className={
@@ -105,22 +106,24 @@ export const Home: React.FC = () => {
   return (
     <HomeContainer>
       <div>
-        {showInitialText && (
-          <h1>Bem-vindo ao coração da Matrix. Vamos começar?</h1>
-        )}
-        {showButtons && showInitialText && (
-          <ButtonsContainer>
-            <button className="yes" onClick={handleYesClick}>
-              Sim
-            </button>
-            <button className="no" onClick={handleNoClick}>
-              Não
-            </button>
-          </ButtonsContainer>
-        )}
+        <ContainerBasic>
+          {showInitialText && (
+            <h1>Bem-vindo ao coração da Matrix. Vamos começar?</h1>
+          )}
+          {showButtons && showInitialText && (
+            <ButtonsContainer>
+              <button className="yes" onClick={handleYesClick}>
+                Sim
+              </button>
+              <button className="no" onClick={handleNoClick}>
+                Não
+              </button>
+            </ButtonsContainer>
+          )}
+        </ContainerBasic>
         {showFullText && (
           <ContainerIniciar>
-            <TypingText>
+            <TypingText hideCaret={hideCaret}>
               {currentText}
               <span className="caret"></span>
             </TypingText>
@@ -132,7 +135,7 @@ export const Home: React.FC = () => {
           </ContainerIniciar>
         )}
         {showGoodbye && (
-          <TypingText>
+          <TypingText hideCaret={hideCaret}>
             {currentText}
             <span className="caret"></span>
           </TypingText>

@@ -49,7 +49,7 @@ const imageInfoMap: {
   },
   Hellen: {
     name: "Hellen",
-    function: "A mulher que tem a coragem de aturar o Pedro",
+    function: "A mulher que tem a coragem de aturar Pedro",
     atribuit: "Humana (Esposa Extraordinária)",
   },
   Dark: {

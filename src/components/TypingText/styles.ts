@@ -12,7 +12,7 @@ export const TypingText = styled.p<{ hideCaret?: boolean }>`
 
   .caret {
     border-right: 0.1em solid #00ff00;
-    animation: ${blinkCaret} 0.75s step-end infinite;
+    animation: ${blinkCaret} 1s step-end infinite;
     visibility: ${({ hideCaret }) => (hideCaret ? 'hidden' : 'visible')};
   }
 `;

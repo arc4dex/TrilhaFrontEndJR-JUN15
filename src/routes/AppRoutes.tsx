@@ -1,9 +1,9 @@
 // src/Router/AppRoutes.tsx
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Home } from "../pages/Home";
 import { ChatBot } from "../pages/ChatBot";
-import { ChatBotMock } from "../pages/ChatBotMock";
+import { PresentationPage } from "../pages/Presentation";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ const AppRoutes: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/skynet" element={<ChatBot />} />
-        <Route path="/teste" element={<ChatBotMock />} />
+        <Route path="/presentation" element={<PresentationPage />} />
       </Routes>
     </Router>
   );
