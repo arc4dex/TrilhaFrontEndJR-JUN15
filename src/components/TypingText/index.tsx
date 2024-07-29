@@ -1,3 +1,4 @@
+// src/components/TypingText.tsx
 import React, { useEffect, useState } from "react";
 import { TypingText as StyledTypingText } from "./styles";
 

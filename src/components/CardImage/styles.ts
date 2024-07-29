@@ -22,7 +22,7 @@ export const CardContainer = styled.div`
   padding: 20px;
   color: #00ff00;
   font-family: 'Courier New', Courier, monospace;
-  animation: ${fadeIn} 0.5s ease-in-out; /* Aplicar animação de fade-in */
+  animation: ${fadeIn} 0.5s ease-in-out; 
 
   @media (min-width: 450px) {
     flex-direction: row;

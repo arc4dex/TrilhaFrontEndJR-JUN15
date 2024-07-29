@@ -40,7 +40,13 @@ const keywordToImageMap: { [key: string]: string } = {
 };
 
 const imageInfoMap: {
-  [key: string]: { name: string; function: string; atribuit: string };
+  [key: string]: {
+    name: string;
+    function: string;
+    atribuit: string;
+    highlight?: string;
+    description?: string;
+  };
 } = {
   Pedro: {
     name: "Pedro",
@@ -67,23 +73,52 @@ const imageInfoMap: {
     function: "Arranhar todo mundo e pedir carinho o dia inteiro",
     atribuit: "Caramelo Raiz",
   },
+  Cozinha: {
+    name: "Culinária",
+    function: "Cozinheiro de Mão Cheia",
+    atribuit: "Criações Veganas Deliciosas",
+    highlight:
+      "https://www.instagram.com/stories/highlights/17959846141892215/",
+    description:
+      "Sou um cozinheiro de mão cheia, e posto alguns dos meus pratos no Instagram.",
+  },
 };
 
 const determineImageAndInfo = (
   message: string
 ): {
   src: string | null;
-  info: { name: string; function: string; atribuit: string } | null;
+  info: {
+    name: string;
+    function: string;
+    atribuit: string;
+    highlight?: string;
+    description?: string;
+  } | null;
 } => {
   let firstKeyword = null;
   let firstIndex = message.length;
 
-  for (const keyword in keywordToImageMap) {
-    const index = message.indexOf(keyword);
+  const keywords = Object.keys(keywordToImageMap).concat([
+    "culinária",
+    "cozinha",
+    "comida",
+  ]);
+
+  for (const keyword of keywords) {
+    const index = message.toLowerCase().indexOf(keyword.toLowerCase());
     if (index !== -1 && index < firstIndex) {
       firstIndex = index;
       firstKeyword = keyword;
     }
+  }
+
+  if (
+    firstKeyword === "culinária" ||
+    firstKeyword === "cozinha" ||
+    firstKeyword === "comida"
+  ) {
+    return { src: null, info: imageInfoMap["Cozinha"] };
   }
 
   return firstKeyword
@@ -99,6 +134,8 @@ export const ChatBot: React.FC = () => {
     name: string;
     function: string;
     atribuit: string;
+    highlight?: string;
+    description?: string;
   } | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isTyping, setIsTyping] = useState<boolean>(false);
@@ -138,7 +175,7 @@ export const ChatBot: React.FC = () => {
             },
             { role: "user", content: query },
           ],
-          max_tokens: 150,
+          max_tokens: 300, 
           temperature: 0.7,
         },
         {
@@ -150,6 +187,7 @@ export const ChatBot: React.FC = () => {
       );
 
       const message = result.data.choices[0].message.content.trim();
+      console.log("Response from API:", message); 
       setResponse(message);
 
       const { src, info } = determineImageAndInfo(message);
@@ -190,7 +228,11 @@ export const ChatBot: React.FC = () => {
         ) : (
           <>
             <ResponseContainer>
-              <Response response={response} onTypingEnd={handleTypingEnd} />
+              <Response
+                response={response}
+                onTypingEnd={handleTypingEnd}
+                imageInfo={currentImageInfo}
+              />
               {showCard && currentImage && currentImageInfo && (
                 <>
                   <InfoHeader>Ficha Técnica:</InfoHeader>
@@ -198,7 +240,7 @@ export const ChatBot: React.FC = () => {
                     src={currentImage}
                     name={currentImageInfo.name}
                     function={currentImageInfo.function}
-                    type={currentImageInfo.atribuit} // Usar 'atribuit' como 'type'
+                    type={currentImageInfo.atribuit}
                   />
                 </>
               )}

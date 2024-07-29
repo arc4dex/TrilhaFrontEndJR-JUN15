@@ -34,7 +34,7 @@ export const PresentationPage: React.FC = () => {
         <ul>
           <li>Fazer referência a filmes</li>
           <li>Ser mais um na fila do pão</li>
-          <li>Fingir que toma a pílula vermelha</li>
+          <li>Fingir que toma a pílula azul</li>
         </ul>
       </InterestsSection>
       <MotivationSection>

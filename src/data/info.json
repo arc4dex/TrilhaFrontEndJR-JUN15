@@ -12,7 +12,7 @@
     "name": "Hellen",
     "profession": "Médica obstetra",
     "workplace": "Hospital Sofia Feldman",
-    "story": "Conheci minha esposa em um campeonato de Kung Fu na cidade natal dela, Cuiabá. Namoramos à distância por 5 anos, depois nos casamos e mudamos juntos para Belo Horizonte. Amo minha esposa e ela é o amor da minha vida. Sou casado há 5 anos.",
+    "story": "Conheci minha esposa em um campeonato de Kung Fu na cidade natal dela, Cuiabá. Namoramos à distância por 5 anos, depois nos casamos e mudamos juntos para Belo Horizonte.",
     "image": "/assets/img/hellen.jpg",
     "function": "A mulher que tem a coragem de aturar o Pedro",
     "type": "Humana (Esposa Extraordinária)"
@@ -27,36 +27,73 @@
       "reason": "Formação em Educação Física"
     }
   ],
-  "pets": [
+  "siblings": [
     {
-      "name": "Dark",
-      "type": "Gato",
-      "origin": "Cuiabá",
-      "story": "O nome do Dark é inspirado no filme The Ghost and the Darkness (A sombra e a Escuridão). Ele tinha um irmão chamado Ghost, mas o mesmo fugiu.",
-      "image": "/assets/img/dark.jpg",
-      "function": "Incomodar seus humanos",
-      "atribuit": "Bebê da mamãe"
+      "name": "João Bernardes (Jão)",
+      "age": 28,
+      "location": "Campo Grande, MS",
+      "occupation": "Trabalha cortando eucalipto",
+      "hobbies": "Gosta de jogar jogos duvidosos"
     },
     {
-      "name": "Safira",
-      "origin": "Adotada em feira de adoção",
-      "type": "Cachorro",
-      "description": "Caramelo",
-      "story": "A Safira tem heterocromia, e um de seus olhos é azul, por isso seu nome. Carinhosa e amorosa, gosta de comer o dia todo e ama mais o seu puff do que sua familia.",
-      "image": "/assets/img/safira.jpg",
-      "function": "Dormir e comer",
-      "atribuit": "Caramelo Raiz"
+      "name": "Maria Bernardes (Bel)",
+      "age": 24,
+      "location": "Barcelona, Espanha",
+      "description": "Toda tatuada",
+      "hobbies": "Adora cozinhar, habilidade única para tirar foto de objetos, incrível visão artística"
     },
     {
-      "name": "Mufasa",
-      "type": "Cachorro",
-      "origin": "Resgatado da rua, gosta de carinho e abraços quentinhos o dia todo. Genioso, quando fica bravo com algo não quer conversa com ninguém",
-      "description": "Caramelo",
-      "image": "/assets/img/mufasa.jpg",
-      "function": "Arranhar todo mundo e pedir carinho o dia inteiro",
-      "atribuit": "Caramelo Raiz"
+      "name": "Davi Guilherme",
+      "age": 12,
+      "hobbies": "Gosta de jogar e comer"
+    },
+    {
+      "name": "Renam Guilherme",
+      "age": 12,
+      "hobbies": "Não gosta de comer mas gosta de assistir o irmão jogar"
     }
   ],
+  "parents": [
+    {
+      "name": "Gilson Bernardes",
+      "description": "Faz os melhores salgados assados e fritos do Brasil"
+    },
+    {
+      "name": "Dilma de Souza",
+      "description": "Atenciosa e dedicada, fazia comidas incríveis"
+    }
+  ],
+  "orientation": "Heterosexual",
+  "favorites": {
+    "color": "Azul",
+    "food": "Um brunch com pão com hommus, panqueca de banana e café com leite de soja.",
+    "movie": "Qualquer um do Tarantino",
+    "anime": "Devilman Cry Baby",
+    "band": "A banda brasileira Supercombo",
+    "music": "Maremotos do Supercombo",
+    "magic_deck": "Deck Grix do Sauron",
+    "boardgame": "Eldritch Horror, baseado nos contos do Love Craft",
+    "author": "Stephen King",
+    "book": "Torre Negra",
+    "bands": ["Gloria", "Selvagens a procura de lei", "Scalene", "O Grilo"]
+  },
+  "dislikes": {
+    "movies": "filmes com o George Clooney",
+    "anime": "Animes com meninas semi nuas e poder da amizade",
+    "food": ["Pepino", "Melão"]
+  },
+  "travel": {
+    "visited_states": ["MS", "MT", "GO", "DF", "SP", "RJ", "BH", "MG", "nordeste todo"],
+    "visited_country": "Paraguai",
+    "road_trip": "Já fiz uma road trip de 4 mil kms de PCX com a minha esposa."
+  },
+  "health": {
+    "condition": "Miastenia gravis",
+    "status": "Sintomas estão controlados"
+  },
+  "dream": {
+    "country": "Inglaterra para ver os jogos da Premier League"
+  },
   "hobbies": [
     {
       "name": "Assistir filmes e séries",
@@ -95,7 +132,8 @@
     },
     {
       "name": "Escrever artigos sobre animes",
-      "image": "/assets/anime.jpg"
+      "image": "/assets/anime.jpg",
+      "articles_link": "https://cupulatrovao.com.br/author/pedro-bernardes/"
     },
     {
       "name": "Participar de podcasts",
@@ -105,6 +143,10 @@
     }
   ],
   "diet": "Sou vegano e consigo adaptar qualquer prato para uma versão vegana.",
+  "cooking": {
+    "highlight": "https://www.instagram.com/stories/highlights/17959846141892215/",
+    "description": "Sou um cozinheiro de mão cheia, e posto alguns dos meus pratos no Instagram."
+  },
   "family": {
     "siblings": {
       "total": 5,
@@ -112,6 +154,36 @@
       "image": "/assets/family.jpg"
     }
   },
+  "pets": [
+    {
+      "name": "Dark",
+      "type": "Gato",
+      "origin": "Cuiabá",
+      "story": "O nome do Dark é inspirado no filme The Ghost and the Darkness (A sombra e a Escuridão). Ele tinha um irmão chamado Ghost, mas o mesmo fugiu.",
+      "image": "/assets/img/dark.jpg",
+      "function": "Incomodar seus humanos",
+      "atribuit": "Bebê da mamãe"
+    },
+    {
+      "name": "Safira",
+      "origin": "Adotada em feira de adoção",
+      "type": "Cachorro",
+      "description": "Caramelo",
+      "story": "A Safira tem heterocromia, e um de seus olhos é azul, por isso seu nome. Carinhosa e amorosa, gosta de comer o dia todo e ama mais o seu puff do que sua familia.",
+      "image": "/assets/img/safira.jpg",
+      "function": "Dormir e comer",
+      "atribuit": "Caramelo Raiz"
+    },
+    {
+      "name": "Mufasa",
+      "type": "Cachorro",
+      "origin": "Resgatado da rua, gosta de carinho e abraços quentinhos o dia todo. Genioso, quando fica bravo com algo não quer conversa com ninguém",
+      "description": "Caramelo",
+      "image": "/assets/img/mufasa.jpg",
+      "function": "Arranhar todo mundo e pedir carinho o dia inteiro",
+      "atribuit": "Caramelo Raiz"
+    }
+  ],
   "contact": {
     "phone": "31 99162-0813",
     "email": "pedroiago.bernardes@gmail.com",
@@ -129,7 +201,8 @@
       "location": "São Paulo, SP",
       "status": "Cursando",
       "start_date": "05/2024",
-      "end_date": "08/2024"
+      "end_date": "08/2024",
+      "link": "https://www.iftl.education/ai-4-tech"
     },
     {
       "degree": "Desenvolvimento Full Stack",
@@ -137,7 +210,8 @@
       "location": "Brasil",
       "status": "Concluído",
       "start_date": "02/2022",
-      "end_date": "02/2023"
+      "end_date": "02/2023",
+      "link": "https://www.kenzie.com.br/"
     },
     {
       "degree": "MBA em Gestão de Saúde Pública",

@@ -16,7 +16,7 @@ export const LoadingText = styled.div`
   font-size: 20px;
   display: flex;
   align-items: center;
-  color: #00ff00; /* Cor do texto Matrix */
+  color: #00ff00;
 
   .dot {
     animation: ${blink} 1s infinite;

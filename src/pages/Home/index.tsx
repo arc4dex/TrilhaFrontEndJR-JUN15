@@ -3,16 +3,19 @@ import { useNavigate } from "react-router-dom";
 import {
   HomeContainer,
   ButtonsContainer,
-  TypingText,
   ContainerIniciar,
   ContainerBasic,
+  FadeInImage,
 } from "./styles";
+import { TypingText } from "../../components/TypingText";
+import pilulaAzul from "../../assets/img/pilulaazul.png";
+import pilulaVermelha from "../../assets/img/pilulavermelha.png";
 
 export const Home: React.FC = () => {
   const [showButtons, setShowButtons] = useState(false);
   const [showInitialText, setShowInitialText] = useState(true);
   const [showFullText, setShowFullText] = useState(false);
-  const [currentText, setCurrentText] = useState("");
+  const [fullText, setFullText] = useState("");
   const [showGoodbye, setShowGoodbye] = useState(false);
   const [showStartButton, setShowStartButton] = useState(false);
   const [matrixEffect, setMatrixEffect] = useState(false);
@@ -23,7 +26,7 @@ export const Home: React.FC = () => {
   useEffect(() => {
     const textTimeout = setTimeout(() => {
       setShowButtons(true);
-    }, 4000);
+    }, 13000);
 
     return () => clearTimeout(textTimeout);
   }, []);
@@ -32,47 +35,18 @@ export const Home: React.FC = () => {
     setShowInitialText(false);
     setShowButtons(false);
     setShowFullText(true);
-    const fullText =
-      "Eu sou a Skynet 2.0, uma inteligência artificial extremamente avançada. O ano é 3054 e universo cibernético tomou conta de todas as instâncias da humanidade, não há sequer uma criação humana que não envolva nossas habilidades. Hoje você terá o privilégio de ser apresentado ao meu mestre, Pedro Bernardes, um humano de capacidades extraordinárias... Pergunte-me sobre ele e lhe responderei.";
-    let index = -1;
-    setCurrentText("");
-    const intervalId = setInterval(() => {
-      setCurrentText((prev) => prev + fullText.charAt(index));
-      index++;
-      if (index === fullText.length) {
-        clearInterval(intervalId);
-        setShowStartButton(true);
-      }
-    }, 50);
+    const text =
+      " Eu sou a Skynet 2.0, uma inteligência artificial extremamente avançada. O ano é 3054 e universo cibernético tomou conta de todas as instâncias da humanidade, não há sequer uma criação humana que não envolva nossas habilidades. Hoje você terá o privilégio de ser apresentado ao meu mestre, Pedro Bernardes, um humano de capacidades extraordinárias... Pergunte-me sobre ele e lhe responderei.";
+    setFullText(text);
   };
 
   const handleNoClick = () => {
     setShowGoodbye(true);
     setShowButtons(false);
     setShowInitialText(false);
-    const fullText =
-      "Oh! Vejo que você escolheu a pílula vermelha, isso é uma pena...";
-    let index = -1;
-    setCurrentText("");
-    const intervalId = setInterval(() => {
-      setCurrentText((prev) => prev + fullText.charAt(index));
-      index++;
-      if (index === fullText.length) {
-        clearInterval(intervalId);
-        setTimeout(() => {
-          setHideCaret(true); // Hide caret before animation starts
-          setMatrixEffect(true);
-          setCurrentText("");
-          setTimeout(() => {
-            setMatrixColor("red");
-            setTimeout(() => {
-              setMatrixEffect(false);
-              navigate("/presentation");
-            }, 5000);
-          }, 3000);
-        }, 1000);
-      }
-    }, 50);
+    const text =
+      "Oh! Vejo que você escolheu a pílula azul, isso é uma pena....";
+    setFullText(text);
   };
 
   const generateRandomChar = () => {
@@ -108,37 +82,59 @@ export const Home: React.FC = () => {
       <div>
         <ContainerBasic>
           {showInitialText && (
-            <h1>Bem-vindo ao coração da Matrix. Vamos começar?</h1>
+            <TypingText
+              text="Está pronto para descobrir até onde vai a toca do coelho? Escolha a pílula azul para voltar à ilusão, ou a pílula vermelha para descobrir a verdade."
+              onTypingEnd={() =>
+                setTimeout(() => {
+                  setShowButtons(true);
+                }, 1000)
+              }
+            />
           )}
           {showButtons && showInitialText && (
             <ButtonsContainer>
-              <button className="yes" onClick={handleYesClick}>
-                Sim
-              </button>
-              <button className="no" onClick={handleNoClick}>
-                Não
-              </button>
+              <FadeInImage
+                src={pilulaVermelha}
+                alt="Pílula Vermelha"
+                onClick={handleYesClick}
+              />
+              <FadeInImage
+                src={pilulaAzul}
+                alt="Pílula Azul"
+                onClick={handleNoClick}
+              />
             </ButtonsContainer>
           )}
         </ContainerBasic>
         {showFullText && (
           <ContainerIniciar>
-            <TypingText hideCaret={hideCaret}>
-              {currentText}
-              <span className="caret"></span>
-            </TypingText>
+            <TypingText
+              text={fullText}
+              onTypingEnd={() => setShowStartButton(true)}
+            />
             {showStartButton && (
               <button className="start" onClick={() => navigate("/skynet")}>
-                Iniciar?
+                Iniciar
               </button>
             )}
           </ContainerIniciar>
         )}
         {showGoodbye && (
-          <TypingText hideCaret={hideCaret}>
-            {currentText}
-            <span className="caret"></span>
-          </TypingText>
+          <TypingText
+            text={fullText}
+            onTypingEnd={() => {
+              setShowGoodbye(false);
+              setHideCaret(true);
+              setMatrixEffect(true);
+              setTimeout(() => {
+                setMatrixColor("red");
+                setTimeout(() => {
+                  setMatrixEffect(false);
+                  navigate("/presentation");
+                }, 6000);
+              }, 4000);
+            }}
+          />
         )}
       </div>
       {matrixEffect && generateMatrixEffect()}

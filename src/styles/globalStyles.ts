@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
     min-height: 100vh;
     font-size: 1.25rem;
-    overflow: auto; /* Permitir rolagem */
+    overflow: auto; 
   }
 
   h1, p {

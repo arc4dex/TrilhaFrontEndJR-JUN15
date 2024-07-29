@@ -23,9 +23,9 @@ export const ContainerCard = styled.div`
   justify-content: center;
   padding: 20px;
   background-color: black;
-  min-height: 100vh; /* Garantir altura mínima de 100vh */
+  min-height: 100vh; 
   width: 100%;
-  overflow: auto; /* Permitir rolagem interna */
+  overflow: auto; 
 
   @media (max-width: 768px) {
     padding: 10px;
@@ -39,9 +39,9 @@ export const ResponseContainer = styled.div`
   align-items: center;
   margin-top: 20px;
   text-align: center;
-  color: #00ff00; /* Estilo Matrix */
+  color: #00ff00; 
   font-family: 'Courier New', Courier, monospace;
-  white-space: pre-wrap; /* Para manter a formatação do texto */
+  white-space: pre-wrap; 
 `;
 
 export const InfoHeader = styled.h3`
@@ -59,7 +59,7 @@ export const FormContainer = styled.div`
 
   form {
     width: 100%;
-    max-width: 600px; /* Limitar a largura máxima do formulário */
+    max-width: 600px; 
     display: flex;
     flex-direction: column;
     align-items: center;
