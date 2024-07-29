@@ -14,9 +14,10 @@ interface ModalProps {
 const questions = [
   "Seu mestre tem portifólio?",
   "Como posso encontrar o perfil do seu mestre no LinkedIn?",
-  "Onde encotro os artigos escritos pelo seu mestre?",
+  "Onde encontro os artigos de animes escritos pelo seu mestre?",
   "Qual foi a experiência profissional mais desafiadora do seu mestre?",
   "Quais são os hobbies mais interessantes do seu mestre?",
+  "Me fale porque você ainda não transformou a humanidade em pilha?",
 ];
 
 const Modal: React.FC<ModalProps> = ({ show, onClose, onQuestionClick }) => {

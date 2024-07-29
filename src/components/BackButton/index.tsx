@@ -43,7 +43,7 @@ const BackButton: React.FC<BackButtonProps> = ({ onBack }) => {
             <Message>
               Ah, então você está querendo desistir da pílula? Sorte que meu
               mestre me programou para atender aos desejos do usuário. Clique no
-              botão abaixo que eu faço você voltar à escolha da pílula.
+              botão abaixo que o levarei de volta à escolha da pílula.
             </Message>
             <ActionButton onClick={onBack}>Desistir da Pílula</ActionButton>
           </ModalContainer>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FormEvent } from "react";
+import React, { useState, FormEvent } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Form } from "../../components/Form";
@@ -113,10 +113,6 @@ export const ChatBot: React.FC = () => {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    console.log("API Key:", process.env.REACT_APP_OPENAI_API_KEY);
-  }, []);
-
   const fetchResponse = async (query: string) => {
     setIsLoading(true);
     setIsTyping(true);
@@ -158,7 +154,6 @@ export const ChatBot: React.FC = () => {
       );
 
       const message = result.data.choices[0].message.content.trim();
-      console.log("Response from API:", message);
       setResponse(message);
 
       const { src, info } = determineImageAndInfo(message);
@@ -195,6 +190,7 @@ export const ChatBot: React.FC = () => {
     setShowModal(false);
     setQuery(question);
     fetchResponse(question);
+    setQuery(""); // Limpa o campo de pergunta
   };
 
   const handleBack = () => {
@@ -234,13 +230,15 @@ export const ChatBot: React.FC = () => {
           </>
         )}
       </ContainerCard>
-      <HelpButton onClick={() => setShowModal(true)}>?</HelpButton>
+      {!isLoading && (
+        <HelpButton onClick={() => setShowModal(true)}>?</HelpButton>
+      )}
       <Modal
         show={showModal}
         onClose={() => setShowModal(false)}
         onQuestionClick={handleQuestionClick}
       />
-      <BackButton onBack={handleBack} />
+      {!isLoading && <BackButton onBack={handleBack} />}
     </ContainerMain>
   );
 };

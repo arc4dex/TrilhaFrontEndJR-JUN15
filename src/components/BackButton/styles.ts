@@ -30,9 +30,9 @@ export const CloseButton = styled.button`
   border: none;
   color: #00ff00;
   font-size: 1.5rem;
-  position: absolute; /* Alterado para posicionamento absoluto */
-  top: 10px; /* Ajustado para posicionar no canto superior direito */
-  right: 10px; /* Ajustado para posicionar no canto superior direito */
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
   cursor: pointer;
 
   &:hover {
