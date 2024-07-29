@@ -33,7 +33,7 @@
       "age": 28,
       "location": "Campo Grande, MS",
       "occupation": "Trabalha cortando eucalipto",
-      "hobbies": "Gosta de jogar jogos duvidosos"
+      "hobbies": "Gosta de jogar e de assistir animes duvidosos"
     },
     {
       "name": "Maria Bernardes (Bel)",
@@ -144,8 +144,7 @@
   ],
   "diet": "Sou vegano e consigo adaptar qualquer prato para uma versão vegana.",
   "cooking": {
-    "highlight": "https://www.instagram.com/stories/highlights/17959846141892215/",
-    "description": "Sou um cozinheiro de mão cheia, e posto alguns dos meus pratos no Instagram."
+    "highlight": "https://www.instagram.com/stories/highlights/17959846141892215/"
   },
   "family": {
     "siblings": {

@@ -1,16 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { StyledResponse } from "./styles";
+import { StyledResponse, ResponseContainer } from "./styles";
 
 interface ResponseProps {
   response: string;
   onTypingEnd: () => void;
-  imageInfo?: {
-    name: string;
-    function: string;
-    atribuit: string;
-    highlight?: string;
-    description?: string;
-  } | null;
 }
 
 const createLinkMarkup = (text: string) => {
@@ -29,14 +22,11 @@ const createLinkMarkup = (text: string) => {
 export const Response: React.FC<ResponseProps> = ({
   response,
   onTypingEnd,
-  imageInfo,
 }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    console.log("Response from API:", response);
-
     if (index < response.length) {
       const timeoutId = setTimeout(() => {
         setDisplayedText((prev) => prev + response.charAt(index));
@@ -49,20 +39,8 @@ export const Response: React.FC<ResponseProps> = ({
   }, [index, response, onTypingEnd]);
 
   return (
-    <StyledResponse>
-      {createLinkMarkup(displayedText)}
-      {imageInfo && imageInfo.highlight && (
-        <div>
-          <p>{imageInfo.description}</p>
-          <a
-            href={imageInfo.highlight}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Veja meus pratos no Instagram
-          </a>
-        </div>
-      )}
-    </StyledResponse>
+    <ResponseContainer>
+      <StyledResponse>{createLinkMarkup(displayedText)}</StyledResponse>
+    </ResponseContainer>
   );
 };

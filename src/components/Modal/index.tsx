@@ -14,7 +14,7 @@ interface ModalProps {
 const questions = [
   "Seu mestre tem portifólio?",
   "Como posso encontrar o perfil do seu mestre no LinkedIn?",
-  "Seu mestre gosta de escrever sobre anime?",
+  "Onde encotro os artigos escritos pelo seu mestre?",
   "Qual foi a experiência profissional mais desafiadora do seu mestre?",
   "Quais são os hobbies mais interessantes do seu mestre?",
 ];
@@ -27,7 +27,7 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, onQuestionClick }) => {
   return (
     <ModalBackground>
       <ModalContainer>
-        <CloseButton onClick={onClose}>×</CloseButton>
+        <CloseButton onClick={onClose}>X</CloseButton>
         <h2>Sugestões de Perguntas</h2>
         {questions.map((question, index) => (
           <QuestionButton key={index} onClick={() => onQuestionClick(question)}>
