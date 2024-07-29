@@ -1,16 +1,20 @@
 import React, { useState, useEffect, FormEvent } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { Form } from "../../components/Form";
 import { Response } from "../../components/Response";
 import { CardImage } from "../../components/CardImage";
 import { Loading } from "../../components/Loading";
 import { getFormattedInfo } from "../../hook/loadInfo";
+import Modal from "../../components/Modal";
+import BackButton from "../../components/BackButton";
 import {
   ContainerCard,
   ResponseContainer,
   InfoHeader,
   FormContainer,
   ContainerMain,
+  HelpButton,
 } from "./styles";
 
 const data = {
@@ -40,13 +44,7 @@ const keywordToImageMap: { [key: string]: string } = {
 };
 
 const imageInfoMap: {
-  [key: string]: {
-    name: string;
-    function: string;
-    atribuit: string;
-    highlight?: string;
-    description?: string;
-  };
+  [key: string]: { name: string; function: string; atribuit: string };
 } = {
   Pedro: {
     name: "Pedro",
@@ -73,52 +71,23 @@ const imageInfoMap: {
     function: "Arranhar todo mundo e pedir carinho o dia inteiro",
     atribuit: "Caramelo Raiz",
   },
-  Cozinha: {
-    name: "Culinária",
-    function: "Cozinheiro de Mão Cheia",
-    atribuit: "Criações Veganas Deliciosas",
-    highlight:
-      "https://www.instagram.com/stories/highlights/17959846141892215/",
-    description:
-      "Sou um cozinheiro de mão cheia, e posto alguns dos meus pratos no Instagram.",
-  },
 };
 
 const determineImageAndInfo = (
   message: string
 ): {
   src: string | null;
-  info: {
-    name: string;
-    function: string;
-    atribuit: string;
-    highlight?: string;
-    description?: string;
-  } | null;
+  info: { name: string; function: string; atribuit: string } | null;
 } => {
   let firstKeyword = null;
   let firstIndex = message.length;
 
-  const keywords = Object.keys(keywordToImageMap).concat([
-    "culinária",
-    "cozinha",
-    "comida",
-  ]);
-
-  for (const keyword of keywords) {
-    const index = message.toLowerCase().indexOf(keyword.toLowerCase());
+  for (const keyword in keywordToImageMap) {
+    const index = message.indexOf(keyword);
     if (index !== -1 && index < firstIndex) {
       firstIndex = index;
       firstKeyword = keyword;
     }
-  }
-
-  if (
-    firstKeyword === "culinária" ||
-    firstKeyword === "cozinha" ||
-    firstKeyword === "comida"
-  ) {
-    return { src: null, info: imageInfoMap["Cozinha"] };
   }
 
   return firstKeyword
@@ -134,13 +103,15 @@ export const ChatBot: React.FC = () => {
     name: string;
     function: string;
     atribuit: string;
-    highlight?: string;
-    description?: string;
   } | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isTyping, setIsTyping] = useState<boolean>(false);
   const [showCard, setShowCard] = useState<boolean>(false);
   const [showForm, setShowForm] = useState<boolean>(true);
+  const [showModal, setShowModal] = useState<boolean>(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     console.log("API Key:", process.env.REACT_APP_OPENAI_API_KEY);
@@ -175,7 +146,7 @@ export const ChatBot: React.FC = () => {
             },
             { role: "user", content: query },
           ],
-          max_tokens: 300, 
+          max_tokens: 300,
           temperature: 0.7,
         },
         {
@@ -187,7 +158,7 @@ export const ChatBot: React.FC = () => {
       );
 
       const message = result.data.choices[0].message.content.trim();
-      console.log("Response from API:", message); 
+      console.log("Response from API:", message);
       setResponse(message);
 
       const { src, info } = determineImageAndInfo(message);
@@ -220,6 +191,16 @@ export const ChatBot: React.FC = () => {
     fetchResponse(query);
   };
 
+  const handleQuestionClick = (question: string) => {
+    setShowModal(false);
+    setQuery(question);
+    fetchResponse(question);
+  };
+
+  const handleBack = () => {
+    navigate("/");
+  };
+
   return (
     <ContainerMain>
       <ContainerCard>
@@ -228,11 +209,7 @@ export const ChatBot: React.FC = () => {
         ) : (
           <>
             <ResponseContainer>
-              <Response
-                response={response}
-                onTypingEnd={handleTypingEnd}
-                imageInfo={currentImageInfo}
-              />
+              <Response response={response} onTypingEnd={handleTypingEnd} />
               {showCard && currentImage && currentImageInfo && (
                 <>
                   <InfoHeader>Ficha Técnica:</InfoHeader>
@@ -240,7 +217,7 @@ export const ChatBot: React.FC = () => {
                     src={currentImage}
                     name={currentImageInfo.name}
                     function={currentImageInfo.function}
-                    type={currentImageInfo.atribuit}
+                    type={currentImageInfo.atribuit} // Usar 'atribuit' como 'type'
                   />
                 </>
               )}
@@ -257,6 +234,13 @@ export const ChatBot: React.FC = () => {
           </>
         )}
       </ContainerCard>
+      <HelpButton onClick={() => setShowModal(true)}>?</HelpButton>
+      <Modal
+        show={showModal}
+        onClose={() => setShowModal(false)}
+        onQuestionClick={handleQuestionClick}
+      />
+      <BackButton onBack={handleBack} />
     </ContainerMain>
   );
 };

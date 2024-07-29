@@ -6,7 +6,7 @@ export const ContainerMain = styled.main`
   @media (max-width: 768px) {
     padding: 0 10px 0 10px;
   }
-`
+`;
 
 export const ContainerBasic = styled.div`
   width: 100%;
@@ -14,7 +14,7 @@ export const ContainerBasic = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
+`;
 
 export const ContainerCard = styled.div`
   display: flex;
@@ -23,9 +23,9 @@ export const ContainerCard = styled.div`
   justify-content: center;
   padding: 20px;
   background-color: black;
-  min-height: 100vh; 
+  min-height: 100vh;
   width: 100%;
-  overflow: auto; 
+  overflow: auto;
 
   @media (max-width: 768px) {
     padding: 10px;
@@ -39,9 +39,9 @@ export const ResponseContainer = styled.div`
   align-items: center;
   margin-top: 20px;
   text-align: center;
-  color: #00ff00; 
+  color: #00ff00;
   font-family: 'Courier New', Courier, monospace;
-  white-space: pre-wrap; 
+  white-space: pre-wrap;
 `;
 
 export const InfoHeader = styled.h3`
@@ -59,7 +59,7 @@ export const FormContainer = styled.div`
 
   form {
     width: 100%;
-    max-width: 600px; 
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,5 +92,28 @@ export const FormContainer = styled.div`
         color: black;
       }
     }
+  }
+`;
+
+export const HelpButton = styled.button`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #000;
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+
+  &:hover {
+    background-color: #00ff00;
+    color: #000;
   }
 `;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   PresentationContainer,
   PhotoSection,
@@ -7,10 +7,17 @@ import {
   InterestsSection,
   MotivationSection,
 } from "./styles";
-
 import FotoPefil from "../../assets/img/perfilImg.png";
+import BackButton from "../../components/BackButton"; // Import BackButton
+import { useNavigate } from "react-router-dom";
 
 export const PresentationPage: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate("/");
+  };
+
   return (
     <PresentationContainer>
       <PhotoSection>
@@ -45,6 +52,7 @@ export const PresentationPage: React.FC = () => {
           a Matrix, um bug de cada vez.
         </p>
       </MotivationSection>
+      <BackButton onBack={handleBack} />
     </PresentationContainer>
   );
 };

@@ -20,6 +20,7 @@ export const Home: React.FC = () => {
   const [showStartButton, setShowStartButton] = useState(false);
   const [matrixEffect, setMatrixEffect] = useState(false);
   const [matrixColor, setMatrixColor] = useState("green");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [hideCaret, setHideCaret] = useState(false);
   const navigate = useNavigate();
 
@@ -76,9 +77,6 @@ export const Home: React.FC = () => {
       </div>
     );
   };
-
-  //testando a atualização do deploy no vercell
-
   return (
     <HomeContainer>
       <div>
