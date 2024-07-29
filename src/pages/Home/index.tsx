@@ -77,6 +77,8 @@ export const Home: React.FC = () => {
     );
   };
 
+  //testando a atualização do deploy no vercell
+
   return (
     <HomeContainer>
       <div>
