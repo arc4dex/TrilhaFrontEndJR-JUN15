@@ -105,13 +105,21 @@ export const ChatBot: React.FC = () => {
     atribuit: string;
   } | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isTyping, setIsTyping] = useState<boolean>(false);
   const [showCard, setShowCard] = useState<boolean>(false);
   const [showForm, setShowForm] = useState<boolean>(true);
   const [showModal, setShowModal] = useState<boolean>(false);
 
   const navigate = useNavigate();
+
+  const speak = (text: string) => {
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "pt-BR";
+    utterance.rate = 1;
+    utterance.pitch = 1;
+    synth.speak(utterance);
+  };
 
   const fetchResponse = async (query: string) => {
     setIsLoading(true);
@@ -155,7 +163,7 @@ export const ChatBot: React.FC = () => {
 
       const message = result.data.choices[0].message.content.trim();
       setResponse(message);
-
+      speak(message); // 🗣️ Aqui ele "fala" a resposta
       const { src, info } = determineImageAndInfo(message);
       setCurrentImage(src);
       setCurrentImageInfo(info);
@@ -190,7 +198,7 @@ export const ChatBot: React.FC = () => {
     setShowModal(false);
     setQuery(question);
     fetchResponse(question);
-    setQuery(""); // Limpa o campo de pergunta
+    setQuery("");
   };
 
   const handleBack = () => {
@@ -213,7 +221,7 @@ export const ChatBot: React.FC = () => {
                     src={currentImage}
                     name={currentImageInfo.name}
                     function={currentImageInfo.function}
-                    type={currentImageInfo.atribuit} // Usar 'atribuit' como 'type'
+                    type={currentImageInfo.atribuit}
                   />
                 </>
               )}
